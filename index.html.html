@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Donde Mama Ika</title>
+<style>
+:root{color-scheme:light;--bg:#F9F9F9;--fg:#1C1C1C;--cd:#FFFFFF;--ac:#D32F2F;--mu:#666666;--bd:#E0E0E0;--gold:#FBC02D;--green:#1B5E20;--coal:#1C1C1C;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+
+
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.4 system-ui,-apple-system,"Segoe UI",sans-serif}
+#app{max-width:640px;margin:0 auto;padding:16px 16px 96px}
+header{display:flex;justify-content:space-between;align-items:center;gap:8px}
+h1{margin:8px 0;font-size:24px;color:var(--fg)}h2{margin:24px 0 8px;font-size:20px}
+.c{display:flex;justify-content:space-between;gap:12px;align-items:center;background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:12px;margin:8px 0}
+.c p{margin:2px 0;color:var(--mu);font-size:14px}.p{font-weight:700}
+.col{flex-direction:column;align-items:stretch}.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+button{font:inherit;cursor:pointer;border:0;border-radius:10px;padding:8px 14px;background:var(--ac);color:#fff;font-weight:600}
+button.ghost{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.q{display:flex;align-items:center;gap:10px}.q button{width:34px;padding:6px 0}
+.bar{position:fixed;left:16px;right:16px;bottom:calc(12px + env(safe-area-inset-bottom,0px));max-width:608px;margin:0 auto;padding:14px;font-size:17px;box-shadow:0 4px 16px #0004}
+input,select{font:inherit;width:100%;padding:9px;border-radius:10px;border:1px solid var(--bd);background:var(--cd);color:var(--fg);margin:4px 0}
+input[type=checkbox]{width:auto}label{display:block;font-size:14px;color:var(--mu);margin-top:8px}
+.tot{font-size:22px;font-weight:800;margin:16px 0;text-align:right}
+a.bar{display:block;text-align:center;text-decoration:none;border-radius:10px;font-weight:700}
+.hd{display:flex;align-items:center;gap:10px}.lo{width:64px;height:64px;border-radius:50%;background:#fff;object-fit:cover;flex:none}.im{width:64px;height:64px;border-radius:12px;object-fit:cover;flex:none}.em{display:flex;align-items:center;justify-content:center;font-size:34px;background:var(--bg)}.f{flex:1;min-width:0}
+body{overflow-x:hidden}body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--coal);z-index:10}
+header{background:var(--coal);color:#fff;margin:-16px calc(50% - 50vw) 8px;padding:10px calc(50vw - 50%);position:sticky;top:env(safe-area-inset-top,0px);z-index:5;flex-wrap:wrap}
+header h1{color:#fff;font-size:18px;margin:0}header .lo{width:44px;height:44px}header button.ghost{color:var(--gold);border-color:var(--gold)}
+nav{display:flex;gap:4px;flex:1}.nv{background:transparent;color:#fff;padding:6px 8px}.nv:hover{color:var(--gold)}
+button{transition:filter .15s,transform .1s}button:hover{filter:brightness(1.12)}button:active{transform:scale(.97)}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:12px 0 4px;scrollbar-width:none}.tb{background:var(--cd);color:var(--fg);border:1px solid var(--bd);border-radius:999px;white-space:nowrap}.tb.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.pc{flex-direction:column;align-items:stretch;padding:0;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.08);transition:transform .15s,box-shadow .15s}.pc:hover{transform:translateY(-2px);box-shadow:0 6px 16px rgba(0,0,0,.14)}
+.pc .im{width:100%;height:150px;border-radius:0}.pc .em{font-size:56px;background:#f1f1f1}.pc .f{padding:12px;flex:none}
+.t{display:block;color:var(--coal);font-size:17px;margin-top:6px}.pr{display:flex;justify-content:space-between;align-items:center;margin-top:8px}.p{font-size:22px;font-weight:800;color:var(--ac)}
+.bdg{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.5px;padding:3px 8px;border-radius:6px;background:var(--coal);color:var(--gold);margin-right:6px}.bdg.gd{background:var(--gold);color:var(--coal)}
+.tot{color:var(--ac)}.okb{background:var(--green);color:#fff;border-radius:12px;padding:14px;font-weight:700;margin:12px 0}.bar{font-size:18px}
+@media(max-width:480px){nav{order:3;flex-basis:100%}}
+</style><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script></head><body><div id="app"></div>
+<script id="d" type="application/json">{"name":"Donde Mama Ika","logo":"logo.jpeg","wa":"","cats":["Salchipapa","Hotdog","Hamburguesas","Menú al Grill"],"items":[
+{"id":"a1","name":"La clásica Ika","desc":"Hamburguesa con papas fritas","price":5.5,"cat":"Hamburguesas","star":true,"on":true},
+{"id":"a2","name":"La Doble Ika","desc":"Doble carne con papas fritas","price":7.5,"cat":"Hamburguesas","star":true,"on":true},
+{"id":"b1","name":"Hotdog clásico","desc":"Pan, salchicha y salsas","price":3.5,"cat":"Hotdog","star":false,"on":true},
+{"id":"c1","name":"Salchipapa clásica","desc":"Papas fritas con salchicha","price":4.5,"cat":"Salchipapa","star":false,"on":true},
+{"id":"c2","name":"Salchi Ika","desc":"Nuestra salchipapa especial","price":6,"cat":"Salchipapa","star":true,"on":true},
+{"id":"d1","name":"Filete de pollo a la plancha","desc":"Con patacones, papas fritas o yuca frita","price":7,"cat":"Menú al Grill","star":false,"on":true},
+{"id":"d2","name":"Chuleta a la plancha","desc":"Con patacones, papas fritas o yuca frita","price":7.5,"cat":"Menú al Grill","star":false,"on":true},
+{"id":"d3","name":"Milanesa de pollo","desc":"Con patacones, papas fritas o yuca frita","price":7,"cat":"Menú al Grill","star":false,"on":true}]}</script>
+<script>
+const SUPABASE_URL='https://natwejncqzlhremfsboq.supabase.co',SUPABASE_KEY='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5hdHdlam5jcXpsaHJlbWZzYm9xIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTIxOTIzMzIsImV4cCI6MjEwNzc2ODMzMn0.5UlwCIoiG22BNGtf6PVKxT9IPPyx_WqTYT9jSfASu_M';
+let sb=null;try{if(SUPABASE_URL.startsWith('http'))sb=supabase.createClient(SUPABASE_URL,SUPABASE_KEY)}catch(e){}
+let D=JSON.parse(document.getElementById('d').textContent);const app=document.getElementById('app');
+let tab='all',cart={},view='menu',canEdit=false,F={n:'',t:'',m:'Retirar en el local',e:'',pw:''},last=null;
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const money=n=>'$'+(+n||0).toFixed(2);
+const total=()=>D.items.reduce((t,i)=>t+(cart[i.id]||0)*i.price,0);
+const count=()=>Object.values(cart).reduce((a,b)=>a+b,0);
+const qty=i=>cart[i.id]?`<div class="q"><button data-a="m" data-i="${i.id}">−</button><b>${cart[i.id]}</b><button data-a="p" data-i="${i.id}">+</button></div>`:`<button data-a="p" data-i="${i.id}">Añadir al Carrito</button>`;
+const EM={'Hamburguesas':'🍔','Hotdog':'🌭','Salchipapa':'🍟','Menú al Grill':'🍗'};
+const pic=i=>i.img?`<img class="im" src="${esc(i.img)}" alt="">`:`<div class="im em">${EM[i.cat]||'🍽️'}</div>`;
+const LB={'Hotdog':'Hot Dogs','Salchipapa':'Salchipapas','Menú al Grill':'Platos al Grill'},lb=c=>LB[c]||c;
+const bdg=i=>(i.cat==='Menú al Grill'?'<span class="bdg">AL GRILL</span>':'')+(i.star?'<span class="bdg gd">★ DESTACADO</span>':'');
+const card=i=>`<div class="c pc">${pic(i)}<div class="f">${bdg(i)}<b class="t">${esc(i.name)}</b><p>${esc(i.desc)}</p><div class="pr"><span class="p">${money(i.price)}</span>${qty(i)}</div></div></div>`;
+const row=i=>`<div class="c"><div class="f"><b>${esc(i.name)}</b><p>${money(i.price)} c/u</p></div><b>${money(cart[i.id]*i.price)}</b>${qty(i)}</div>`;
+const tabsHtml=()=>`<div class="tabs">${['all',...D.cats].map(c=>`<button class="tb${tab===c?' on':''}" data-a="tab" data-t="${esc(c)}">${c==='all'?'Todo':esc(lb(c))}</button>`).join('')}</div>`;
+function render(){
+ if(view==='login')return rLogin();if(view==='orders')return rOrders();if(view==='admin')return rAdmin();if(view==='cart')return rCart();if(view==='done')return rDone();
+ const av=D.items.filter(i=>i.on),f=av.filter(i=>i.star);
+ app.innerHTML=`<header><div class="hd">${D.logo?`<img class="lo" src="${esc(D.logo)}" alt="">`:''}<h1>${esc(D.name)}</h1></div><nav><button class="nv" data-a="nav" data-t="dest">Destacados</button><button class="nv" data-a="nav" data-t="menu">Menú</button>${canEdit?'<button class="nv" data-a="admin">Administrar</button>':''}</nav><button data-a="cart">🛒 Ver Carrito / Pedir${count()?` (${count()})`:''}</button></header>`+
+ tabsHtml()+(tab==='all'&&f.length?`<h2 id="dest">⭐ Platos destacados</h2>${f.map(card).join('')}`:'')+'<div id="menu"></div>'+
+ D.cats.filter(c=>tab==='all'||tab===c).map(c=>{const l=av.filter(i=>i.cat===c);return l.length?`<h2>${esc(lb(c))}</h2>${l.map(card).join('')}`:''}).join('')+
+ (canEdit?'':'<p style="text-align:center;margin-top:32px"><button class="ghost" data-a="login">Acceso del local</button></p>')+(count()?`<button class="bar" data-a="cart">Ver pedido (${count()}) · ${money(total())}</button>`:'');
+}
+function rCart(){
+ const l=D.items.filter(i=>cart[i.id]);
+ app.innerHTML=`<header><h1>Tu pedido</h1><button class="ghost" data-a="back">Seguir pidiendo</button></header><h2>Resumen del pedido</h2>${l.map(row).join('')}
+ <div class="tot">Total a cancelar: ${money(total())}</div>
+ <label>Tu nombre<input data-k="n" value="${esc(F.n)}"></label>
+ <label>Número de contacto *<input data-k="t" type="tel" inputmode="tel" value="${esc(F.t)}"></label>
+ <label>¿Cómo lo quieres?<select data-k="m"><option ${F.m==='Retirar en el local'?'selected':''}>Retirar en el local</option><option ${F.m==='Consumir en el local'?'selected':''}>Consumir en el local</option></select></label>
+ <p id="err" style="color:var(--ac)"></p><button class="bar" data-a="ok">Finalizar Pedido · ${money(total())}</button>`;
+}
+function rDone(){
+ app.innerHTML=`<div class="okb">✅ ¡Pedido listo! Revisa tu total a cancelar.</div><div class="tot" style="text-align:left">Total a cancelar: ${money(last.t)}</div>
+ <p>${sb?'Tu pedido ya fue enviado al local. Si quieres, avísanos también por WhatsApp.':'Para que el local reciba tu pedido, presiona el botón y envía el mensaje por WhatsApp.'}</p>
+ ${last.u?`<a class="bar" style="position:static;background:var(--ac);color:#fff;padding:14px" href="${last.u}" target="_blank" rel="noopener">Enviar pedido por WhatsApp</a>`:'<p>El local aún no configuró su WhatsApp para recibir pedidos.</p>'}
+ <p><button class="ghost" data-a="new0">Hacer otro pedido</button></p>`;
+}
+function rAdmin(){
+ app.innerHTML=`<header><h1>Administrar</h1><div class="row"><button class="ghost" data-a="orders">Pedidos</button><button class="ghost" data-a="out">Salir</button><button class="ghost" data-a="back">Volver</button></div></header>
+ <label>Nombre del local<input data-g="name" value="${esc(D.name)}"></label>
+ <label>WhatsApp que recibe pedidos (código de país y número, solo dígitos)<input data-g="wa" inputmode="numeric" value="${esc(D.wa)}"></label>
+ <label>Logo del local<input type="file" accept="image/*" data-up="__logo"></label><h2>Platos</h2>${D.items.map(i=>`<div class="c col"><div class="row">${pic(i)}<input style="width:auto" type="file" accept="image/*" data-up="${i.id}"></div><input data-f="name" data-i="${i.id}" value="${esc(i.name)}"><input data-f="desc" data-i="${i.id}" value="${esc(i.desc)}">
+ <div class="row"><input style="width:110px" data-f="price" data-i="${i.id}" type="number" step="0.01" value="${i.price}"><select style="width:auto" data-f="cat" data-i="${i.id}">${D.cats.map(c=>`<option ${c===i.cat?'selected':''}>${esc(c)}</option>`).join('')}</select></div>
+ <div class="row"><label><input type="checkbox" data-f="star" data-i="${i.id}" ${i.star?'checked':''}> Destacado</label><label><input type="checkbox" data-f="on" data-i="${i.id}" ${i.on?'checked':''}> Disponible</label><button class="ghost" data-a="del" data-i="${i.id}">Eliminar</button></div></div>`).join('')}
+ <button class="ghost" data-a="add">+ Agregar plato</button><button class="bar" data-a="save">Publicar cambios</button>`;
+}
+async function save(){
+ if(!sb)return alert('Falta conectar Supabase');
+ const {error}=await sb.from('menu_config').update({data:D}).eq('id',1);
+ alert(error?'No se pudo guardar: '+error.message:'¡Cambios guardados!');
+}
+function rLogin(){app.innerHTML=`<header><h1>Acceso del local</h1><button class="ghost" data-a="back">Volver</button></header><label>Correo<input data-k="e" type="email" value="${esc(F.e)}"></label><label>Contraseña<input data-k="pw" type="password" value="${esc(F.pw)}"></label><p id="err" style="color:var(--ac)"></p><button class="bar" data-a="go">Entrar</button>`}
+async function rOrders(){
+ const H='<header><h1>Pedidos</h1><button class="ghost" data-a="admin">Volver</button></header>';
+ app.innerHTML=H+'<p>Cargando...</p>';
+ const {data,error}=await sb.from('pedidos').select('*').order('created_at',{ascending:false}).limit(50);
+ app.innerHTML=H+(error?`<p>${esc(error.message)}</p>`:(data.length?data.map(o=>`<div class="c col"><b>${esc(o.nombre||'Sin nombre')} · ${esc(o.telefono)}</b><p>${new Date(o.created_at).toLocaleString()} · ${esc(o.modalidad)} · ${esc(o.estado)}</p><p>${(o.items||[]).map(x=>x.q+'x '+esc(x.n)).join(', ')}</p><div class="row"><b class="p">${money(o.total)}</b>${o.estado==='nuevo'?`<button data-a="done" data-i="${o.id}">Marcar entregado</button>`:''}</div></div>`).join(''):'<p>Aún no hay pedidos.</p>'));
+}
+app.addEventListener('click',async e=>{
+ const b=e.target.closest('[data-a]');if(!b)return;const a=b.dataset.a,id=b.dataset.i;
+ if(a==='p')cart[id]=(cart[id]||0)+1;
+ else if(a==='m'){cart[id]--;if(cart[id]<=0)delete cart[id];if(!count())view='menu'}
+ else if(a==='cart'){if(!count()){const m=document.getElementById('menu');if(m)m.scrollIntoView({behavior:'smooth'});return}view='cart'}else if(a==='tab')tab=b.dataset.t;else if(a==='nav'){tab='all';render();const el=document.getElementById(b.dataset.t);if(el)el.scrollIntoView({behavior:'smooth'});return}else if(a==='back')view='menu';else if(a==='admin')view='admin';
+ else if(a==='new0'){cart={};view='menu'}
+ else if(a==='add')D.items.push({id:'i'+Date.now(),name:'Nuevo plato',desc:'',price:0,cat:D.cats[0],star:false,on:true});
+ else if(a==='del'){if(confirm('¿Eliminar este plato?'))D.items=D.items.filter(i=>i.id!==id)}
+ else if(a==='save'){save();return}
+ else if(a==='login')view='login';
+ else if(a==='go'){if(!sb)return;const {error}=await sb.auth.signInWithPassword({email:F.e,password:F.pw});if(error){document.getElementById('err').textContent='Correo o contraseña incorrectos.';return}canEdit=true;view='admin'}
+ else if(a==='out'){if(sb)await sb.auth.signOut();canEdit=false;view='menu'}
+ else if(a==='orders')view='orders';
+ else if(a==='done'){await sb.from('pedidos').update({estado:'entregado'}).eq('id',id)}
+ else if(a==='ok'){
+  if(F.t.replace(/\D/g,'').length<7){document.getElementById('err').textContent='Ingresa un número de contacto válido.';return}
+  const l=D.items.filter(i=>cart[i.id]),t=total();
+  const msg=`*Nuevo pedido - ${D.name}*\nCliente: ${F.n||'(sin nombre)'}\nContacto: ${F.t}\nModalidad: ${F.m}\n\n`+l.map(i=>`${cart[i.id]}x ${i.name} - ${money(cart[i.id]*i.price)}`).join('\n')+`\n\n*Total: ${money(t)}*`;
+  const u=D.wa?`https://wa.me/${D.wa.replace(/\D/g,'')}?text=${encodeURIComponent(msg)}`:'';
+  if(sb){const {error}=await sb.from('pedidos').insert({nombre:F.n,telefono:F.t,modalidad:F.m,items:l.map(i=>({n:i.name,q:cart[i.id],p:i.price})),total:t});if(error){document.getElementById('err').textContent='No se pudo enviar el pedido. Intenta de nuevo.';return}}
+  last={t,u};view='done';if(u)window.open(u,'_blank')}
+ render();
+});
+app.addEventListener('change',async e=>{
+ const t=e.target,id=t.dataset.up;if(!id||!t.files[0])return;
+ try{if(!sb)return;const f=t.files[0],p=Date.now()+'-'+f.name.replace(/[^\w.]/g,'_');
+ const {error}=await sb.storage.from('fotos').upload(p,f);if(error)throw error;
+ const url=sb.storage.from('fotos').getPublicUrl(p).data.publicUrl;
+ if(id==='__logo')D.logo=url;else{const i=D.items.find(x=>x.id===id);if(i)i.img=url}
+ render()}catch(err){alert('No se pudo subir la imagen')}
+});
+app.addEventListener('input',e=>{
+ const t=e.target;
+ if(t.dataset.k)F[t.dataset.k]=t.value;
+ else if(t.dataset.g)D[t.dataset.g]=t.value;
+ else if(t.dataset.f){const i=D.items.find(x=>x.id===t.dataset.i);if(i)i[t.dataset.f]=t.type==='checkbox'?t.checked:t.type==='number'?(+t.value||0):t.value}
+});
+if(!sb)render();else app.innerHTML='<p style="padding:40px;text-align:center">Cargando menú...</p>';
+(async()=>{if(sb){try{const {data}=await sb.from('menu_config').select('data').eq('id',1).single();if(data&&data.data)D=data.data;const s=await sb.auth.getSession();canEdit=!!(s.data&&s.data.session)}catch(e){}render()}})();
+</script></body></html>
